@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Bagas Maulana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .cv-container {
+            width: 210mm; /* A4 width */
+            max-width: 100%;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            margin: 40px auto;
+            overflow: hidden;
+        }
+
+        /* Left Column */
+        .left-column {
+            width: 35%;
+            background-color: #1a1e5a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-img-container {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .left-content {
+            padding: 35px 30px;
+            flex-grow: 1;
+        }
+
+        .left-content h2 {
+            font-size: 22px;
+            font-weight: 700;
+            border-bottom: 2px solid white;
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+        }
+
+        .left-content p {
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .left-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .left-content li {
+            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .left-content li strong {
+            margin-right: 5px;
+            font-weight: 700;
+        }
+
+        /* Right Column */
+        .right-column {
+            width: 65%;
+            padding: 50px 40px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 58px;
+            font-weight: 800;
+            color: #1a1e5a;
+            margin: 0;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .header p {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a1e5a;
+            margin-top: 15px;
+            margin-bottom: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .separator {
+            height: 3px;
+            background-color: #1a1e5a;
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1a1e5a;
+            margin-top: 0;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .two-cols {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 35px;
+        }
+
+        .col {
+            width: 47%;
+        }
+
+        .edu-item {
+            margin-bottom: 20px;
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-item h4 {
+            margin: 0 0 5px 0;
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1e5a;
+            font-style: italic;
+        }
+
+        .edu-item p {
+            margin: 0 0 3px 0;
+            font-size: 13px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .edu-item .date {
+            color: #999;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .skills-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .skills-list li {
+            font-size: 13px;
+            margin-bottom: 8px;
+            color: #1a1e5a;
+            font-weight: 700;
+        }
+
+        .experience-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 35px;
+        }
+
+        .exp-left {
+            width: 38%;
+            padding-right: 15px;
+            box-sizing: border-box;
+        }
+
+        .exp-left .date {
+            font-size: 11px;
+            font-weight: 600;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .exp-left h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            font-weight: 800;
+            color: #1a1e5a;
+            line-height: 1.2;
+        }
+        
+        .exp-left .company {
+            font-size: 13px;
+            color: #333;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .exp-right {
+            width: 62%;
+        }
+
+        .exp-right ul {
+            list-style-type: disc;
+            padding-left: 15px;
+            margin: 0;
+            font-size: 13px;
+            color: #1a1e5a;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .exp-right li {
+            margin-bottom: 6px;
+        }
+
+        .references {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ref-item {
+            width: 48%;
+        }
+
+        .ref-item h4 {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            font-weight: 800;
+            color: #1a1e5a;
+        }
+
+        .ref-item p {
+            margin: 0 0 3px 0;
+            font-size: 12px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .action-btn {
+            padding: 10px 15px;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s;
+        }
+        .portfolio-btn {
+            background-color: #1a1e5a;
+            color: white;
+        }
+        .portfolio-btn:hover { background-color: #2c3182; }
+        
+        .print-btn {
+            background-color: #f4f4f4;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+        .print-btn:hover { background-color: #e0e0e0; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .skill-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1e5a;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            transition: transform 0.2s;
+        }
+        .skill-badge:hover {
+            transform: translateY(-2px);
+            background-color: #f0f0f0;
+        }
+        .skill-badge i {
+            font-size: 18px;
+            width: 20px;
+            text-align: center;
+        }
+        .skill-badge i.fa-html5 { color: #e34f26; }
+        .skill-badge i.fa-css3-alt { color: #1572B6; }
+        .skill-badge i.fa-python { color: #3776AB; }
+        .skill-badge i.fa-figma { color: #F24E1E; }
+        .skill-badge i.fa-palette { color: #00C4CC; } /* Canva */
+
+        @media print {
+            @page { size: A4; margin: 0; }
+            body { background-color: white; margin: 0; padding: 0; }
+            .cv-container {
+                margin: 0;
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+                overflow: hidden;
+                page-break-after: always;
+            }
+            .left-column {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .action-buttons { display: none !important; }
+        }
+        
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+                width: 100%;
+                margin: 0;
+            }
+            .left-column, .right-column {
+                width: 100%;
+            }
+            .two-cols {
+                flex-direction: column;
+            }
+            .col {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .experience-item {
+                flex-direction: column;
+            }
+            .exp-left, .exp-right {
+                width: 100%;
+            }
+            .exp-left {
+                margin-bottom: 10px;
+            }
+            .references {
+                flex-direction: column;
+            }
+            .ref-item {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-container">
+    <!-- Left Column -->
+    <div class="left-column">
+        <div class="profile-img-container">
+            <!-- Using a placeholder image since I cannot extract the exact face from the image -->
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Tasya Marina" class="profile-img">
+        </div>
+        <div class="left-content">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah siswa jurusan Rekayasa Perangkat Lunak (RPL) di SMKN 1 Bondowoso yang memiliki ketertarikan tinggi pada bidang pengembangan website dan teknologi informasi. Saya memiliki semangat belajar yang pantang menyerah, jujur, serta mudah beradaptasi dengan lingkungan baru. Saat ini saya sedang berfokus mengasah kemampuan agar siap terjun ke dunia industri dan profesional.</p>
+
+            <h2 style="margin-top: 40px;">Data Diri</h2>
+            <ul>
+                <li><strong>Nama:</strong> M. Bagas Maulana.</li>
+                <li><strong>Tempat / Tanggal Lahir:</strong> Bondowoso / 25-03-2009</li>
+                <li><strong>Jenis Kelamin:</strong> Laki-laki</li>
+                <li><strong>Agama:</strong> Islam</li>
+                <li><strong>Alamat:</strong> Jalan Dendeles, Bondowoso, Indonesia.</li>
+                <li><strong>Kota:</strong> Bondowoso | <strong>Negara:</strong> Indonesia</li>
+                <li><strong>Kewarganegaraan:</strong> Indonesia</li>
+                <li><strong>Email:</strong> bm3796586@gmail.com</li>
+                <li><strong>No Telp/HP:</strong> 085167372665</li>
+                <li><strong>Facebook:</strong> Muhammad Bagas Maulana</li>
+                <li><strong>Instagram:</strong> lanfortis </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+        <div class="header">
+            <h1>Bagas<br>Maulana</h1>
+            <p>16th | Junior Web Desain | Bondowoso </p>
+            <div class="action-buttons">
+                <!-- Ubah index.html dengan link web portofoliomu -->
+                <a href="index.html" class="action-btn portfolio-btn"><i class="fas fa-external-link-alt"></i> Kunjungi Portofolio</a>
+                <button onclick="window.print()" class="action-btn print-btn"><i class="fas fa-print"></i> Cetak PDF</button>
+            </div>
+        </div>
+        
+        <div class="separator"></div>
+
+        <div class="two-cols">
+            <div class="col">
+                <h2 class="section-title">Riwayat<br>Pendidikan</h2>
+                <div class="edu-item">
+                    <h4>Sekolah Menengah Kejuruan (SMK)</h4>
+                    <p>Rekayasa Perangkat Lunak / SMKN 1 Bondowoso</p>
+                    <p class="date">2024 - Sekarang</p>
+                </div>
+                <div class="edu-item">
+                    <h4>Sekolah Menengah Pertama (SMP)</h4>
+                    <p>SMPN 1 Tapen</p>
+                    <p class="date">2021 - 2024</p>
+                </div>
+                <div class="edu-item">
+                    <h4>Sekolah Dasar (SD)</h4>
+                    <p>SDN 3 Wonosari</p>
+                    <p class="date">2015 - 2021</p>
+                </div>
+            </div>
+            <div class="col">
+                <h2 class="section-title">Keahlian</h2>
+                <div class="skills-grid">
+                    <div class="skill-badge">
+                        <i class="fa-brands fa-html5"></i> HTML
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fa-brands fa-css3-alt"></i> CSS
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fa-brands fa-python"></i> Python
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fa-brands fa-figma"></i> Figma
+                    </div>
+                    <div class="skill-badge">
+                        <i class="fa-solid fa-palette"></i> Canva
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Pengalaman Proyek & Tugas</h2>
+        
+        <div class="experience-item">
+            <div class="exp-left">
+                <h4>Pembuatan<br>Website<br>Portofolio</h4>
+            </div>
+            <div class="exp-right">
+                <ul>
+                    <li>Membangun website portofolio interaktif menggunakan responsif HTML, CSS, dan JavaScript.</li>
+                    <li>Merancang antarmuka ui/ux agar tampilan terlihat modern serta pas untuk layar handphone.</li>
+                    <li>Mempelajari dan menerapkan prinsip desain web yang up-to-date.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-left">
+                <h4>Sistem<br>Informasi<br>Pendataan</h4>
+            </div>
+            <div class="exp-right">
+                <ul>
+                    <li>Bekerjasama dalam tim untuk membuat rancangan aplikasi pendataan berbasis web.</li>
+                    <li>Memberikan ide struktur database sederhana untuk menyimpan data dengan aman.</li>
+                    <li>Memastikan seluruh fungsi utama dan transisi antarmuka berjalan optimal tanpa ada hambatan.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title">Pengalaman Organisasi <br>& Ekstrakurikuler</h2>
+        <div class="experience-item" style="margin-bottom: 0;">
+            <div class="exp-left">
+                <div class="date">Jul 2024 - Sekarang</div>
+                <h4>Anggota<br>Divisi<br>Media</h4>
+                <div class="company">OSIS SMKN 1 Bondowoso</div>
+            </div>
+            <div class="exp-right">
+                <ul>
+                    <li>Membuat desain visual dan poster pengumuman untuk acara intern sekolah.</li>
+                    <li>Mengelola publikasi jadwal kegiatan pada akun media sosial OSIS dengan konten yang interaktif.</li>
+                    <li>Berkolaborasi dengan divisi lain saat menjalankan dokumentasi acara.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

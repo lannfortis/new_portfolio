@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Developer & Designer</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <!-- Navbar Navigation -->
+    <header class="navbar">
+        <div class="logo">Portfo<span>lio.</span></div>
+        <nav>
+            <a href="#home">Beranda</a>
+            <a href="#services">Keahlian</a>
+            <a href="#projects">Proyek</a>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <button id="theme-toggle"
+                style="background: none; border: none; cursor: pointer; color: var(--text-dark); display: flex; align-items: center; padding: 0;">
+                <i data-feather="moon" id="theme-icon"></i>
+            </button>
+            <a href="cv.html" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Lihat CV</a>
+            <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="badge">👋 Selamat datang di duniaku</span>
+            <h1>Hai! Saya <br><span class="highlight">Muhammad Bagas Maulana</span></h1>
+            <p>Saya adalah siswa SMKN 1 Bondowoso yang memiliki minat di bidang teknologi dan olahraga. Saya terus
+                belajar mengembangkan kemampuan dalam coding dan desain. Dengan semangat belajar dan konsistensi, saya
+                yakin jika setiap langkah kecil walau hanya 1% akan membawa kemajuan besar di masa depan .</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Hubungi Saya <i data-feather="arrow-right"></i></a>
+                <a href="#projects" class="btn btn-secondary">Lihat Karya</a>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>2+</h3>
+                    <p>Tahun Pengalaman</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Proyek Selesai</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="blob-bg"></div>
+            <img src="images/fotoprofile.png" alt="Developer Avatar" class="fotoprofile">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-header">
+            <h2>Bidang <br><span class="highlight">Keahlianku</span></h2>
+            <p>Saya menggabungkan hasrat saya pada desain dan pengkodean untuk menciptakan solusi yang menakjubkan
+                secara visual dan sangat fungsional.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <img src="images/Html.jpeg" alt="HTML"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+                </div>
+                <h3>HTML</h3>
+                <p>Membangun struktur aplikasi web yang responsif, cepat, dan terukur menggunakan elemen semantik
+                    modern.</p>
+            </div>
+            <div class="service-card active">
+                <div class="icon-wrapper">
+                    <img src="images/CSS.jpeg" alt="CSS"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+                </div>
+                <h3>CSS</h3>
+                <p>Merancang antarmuka yang indah dan modern dengan tata letak yang bersih serta animasi yang mulus.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <img src="images/python.jpeg" alt="Python"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+                </div>
+                <h3>Python</h3>
+                <p>Menciptakan logika backend yang tangguh, pemrosesan data, dan solusi server yang aman.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <img src="images/phpmyadmin.jpeg" alt="phpMyAdmin"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" />
+                </div>
+                <h3>phpMyAdmin</h3>
+                <p>Mengelola dan merancang basis data MySQL dengan antarmuka yang efisien dan terstruktur.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-wrapper"><i data-feather="figma"></i></div>
+                <h3>Figma</h3>
+                <p>Merancang UI/UX, wireframe, dan prototipe yang responsif untuk menghadirkan pengalaman pengguna
+                    terbaik.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" alt="Canva"
+                        style="width: 24px; height: 24px;" />
+                </div>
+                <h3>Canva</h3>
+                <p>Membuat desain grafis, prototipe ringan, visualisasi data, dan konten presentasi secara kreatif.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-title text-center">
+            <h2>Karya & <br><span class="highlight">Projek Saya</span></h2>
+            <p> Ini adalah beberapa project yang pernah saya buat.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/project1.png" alt="Project 1">
+                </div>
+                <div class="project-info">
+                    <h4>Website Portofolio</h4>
+                    <p>UI/UX Design • HTML/CSS</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/projek.png" alt="Project 2">
+                </div>
+                <div class="project-info">
+                    <h4>Simple Smart Home</h4>
+                    <p>Sistem kontrol rumah pintar untuk mengatur lampu dan perangkat secara praktis melalui dashboard
+                        digital.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/projek1.png" alt="Project 3">
+                </div>
+                <div class="project-info">
+                    <h4>Aplikasi E-Commerce</h4>
+                    <p>Website pemesanan online dengan fitur produk, keranjang belanja, transaksi, dan manajemen data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="contact" class="cta-section">
+        <div class="cta-content">
+            <h2>Kirim Pesan <br>Langsung ke Emailku</h2>
+            <p>Mari wujudkan visi kita bersama. Silakan tulis nama dan pesanmu di bawah ini!</p>
+            <form action="https://formsubmit.co/bm3796586@gmail.com" method="POST" class="contact-form">
+                <!-- Disable Captcha FormSubmit -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Template FormSubmit -->
+                <input type="hidden" name="_template" value="table">
+                <!-- Halaman sukses setelah terkirim -->
+                <input type="hidden" name="_next" value="#">
+
+                <input type="text" name="Nama_Pengirim" placeholder="Siapa namamu?" required class="form-input"
+                    autocomplete="of    f">
+                <input type="email" name="Email_Pengirim" placeholder="Email aktifmu..." required class="form-input"
+                    autocomplete="email">
+                <textarea name="Pesan" placeholder="Ketik pesan yang ingin kamu sampaikan..." rows="4" required
+                    class="form-input"></textarea>
+
+                <button type="submit" class="contact-submit-btn">Langsung Kirim <i data-feather="send"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Portfo<span>lio.</span></div>
+            <p>© 2026 Bagas. All rights reserved.</p>
+            <div class="socials">
+                <a href="https://wa.me/6280000000000" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i
+                        data-feather="message-circle"></i></a>
+                <a href="https://github.com/lannfortis" target="_blank" rel="noopener noreferrer"><i
+                        data-feather="github"></i></a>
+                <a href="https://www.instagram.com/lanfortis?igsh=MWdwMHdmczJsdm9qeg==" target="_blank"
+                    rel="noopener noreferrer"><i data-feather="instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons & Scripts -->
+    <script>
+        feather.replace();
+
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.setAttribute('data-theme', 'dark');
+            themeToggle.innerHTML = '<i data-feather="sun" id="theme-icon"></i>';
+            feather.replace();
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i data-feather="moon" id="theme-icon"></i>';
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i data-feather="sun" id="theme-icon"></i>';
+            }
+            feather.replace();
+        });
+    </script>
+</body>
+
+</html>
